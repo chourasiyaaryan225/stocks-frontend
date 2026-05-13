@@ -1,0 +1,81 @@
+[
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc",
+    "details": {
+      "country": "US",
+      "currency": "USD",
+      "estimateCurrency": "USD",
+      "exchange": "NASDAQ NMS - GLOBAL MARKET",
+      "finnhubIndustry": "Technology",
+      "ipo": "1980-12-12",
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/AAPL.png",
+      "marketCapitalization": 4298695.591752285,
+      "name": "Apple Inc",
+      "phone": "14089961010",
+      "shareOutstanding": 14681.14,
+      "ticker": "AAPL",
+      "weburl": "https://www.apple.com/"
+    }
+  },
+
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft Corp",
+    "details": {
+      "country": "US",
+      "currency": "USD",
+      "estimateCurrency": "USD",
+      "exchange": "NASDAQ",
+      "finnhubIndustry": "Technology",
+      "ipo": "1986-03-13",
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/MSFT.png",
+      "marketCapitalization": 3150000,
+      "name": "Microsoft Corp",
+      "phone": "14258828080",
+      "shareOutstanding": 7430.00,
+      "ticker": "MSFT",
+      "weburl": "https://www.microsoft.com/"
+    }
+  },
+
+  {
+    "symbol": "TSLA",
+    "name": "Tesla Inc",
+    "details": {
+      "country": "US",
+      "currency": "USD",
+      "estimateCurrency": "USD",
+      "exchange": "NASDAQ",
+      "finnhubIndustry": "Automobile",
+      "ipo": "2010-06-29",
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/TSLA.png",
+      "marketCapitalization": 890000,
+      "name": "Tesla Inc",
+      "phone": "15125168177",
+      "shareOutstanding": 3200.00,
+      "ticker": "TSLA",
+      "weburl": "https://www.tesla.com/"
+    }
+  },
+
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc",
+    "details": {
+      "country": "US",
+      "currency": "USD",
+      "estimateCurrency": "USD",
+      "exchange": "NASDAQ",
+      "finnhubIndustry": "Internet Content",
+      "ipo": "2004-08-19",
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/GOOGL.png",
+      "marketCapitalization": 2100000,
+      "name": "Alphabet Inc",
+      "phone": "16502530000",
+      "shareOutstanding": 12400.00,
+      "ticker": "GOOGL",
+      "weburl": "https://abc.xyz/"
+    }
+  }
+]
