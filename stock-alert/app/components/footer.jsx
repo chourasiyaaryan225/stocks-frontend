@@ -43,7 +43,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  href="/"
+                  href="/dashboard"
                   className="hover:text-[#f77f00] transition-all duration-300"
                 >
                   Home
@@ -52,7 +52,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  href="/dashboard"
+                  href="/watchList"
                   className="hover:text-[#f77f00] transition-all duration-300"
                 >
                   WatchList
@@ -61,7 +61,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  href="/portfolio"
+                  href="/holdings"
                   className="hover:text-[#f77f00] transition-all duration-300"
                 >
                   Holdings
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
                <li>
                 <Link
-                  href="/portfolio"
+                  href="/alerts"
                   className="hover:text-[#f77f00] transition-all duration-300"
                 >
                   Alerts
