@@ -2,15 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { IoNotificationsOutline } from "react-icons/io5";
+import { IoNotificationsOutline, IoLogOutOutline } from "react-icons/io5";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
+  const dropdownRef = useRef(null);
 
   const router = useRouter();
 
@@ -23,6 +24,18 @@ const Header = () => {
     ?.map((word) => word[0])
     ?.join("")
     ?.toUpperCase();
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowLogout(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -118,7 +131,7 @@ const Header = () => {
           </Link>
 
           {/* User Initials */}
-          <div className="relative">
+          <div className="relative" ref={dropdownRef}>
 
             <div
               onClick={() => setShowLogout(!showLogout)}
@@ -132,12 +145,21 @@ const Header = () => {
             </div>
 
             {showLogout && (
-              <div className="absolute right-0 mt-3 w-32 bg-white border border-gray-200 rounded-xl shadow-lg z-50 overflow-hidden">
+              <div className="absolute right-0 mt-3 w-48 bg-white border border-gray-200 rounded-xl shadow-xl z-50 overflow-hidden">
+
+                <div className="px-4 py-3 border-b border-gray-100">
+                  <p className="text-sm font-medium text-gray-900">{userName}</p>
+                  <p className="text-xs text-gray-500">{user?.id}</p>
+                </div>
 
                 <button
-                  onClick={handleLogout}
-                  className="w-full text-left px-4 py-3 text-sm font-medium text-red-500 hover:bg-red-50 transition-all"
+                  onClick={() => {
+                    setShowLogout(false);
+                    handleLogout();
+                  }}
+                  className="w-full text-left px-4 py-3 text-sm font-medium text-red-600 hover:bg-red-50 transition-all flex items-center gap-3"
                 >
+                  <IoLogOutOutline className="text-lg" />
                   Logout
                 </button>
 
